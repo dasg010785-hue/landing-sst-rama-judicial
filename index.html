@@ -1366,31 +1366,40 @@ nav.tabs{
 <!-- ===================== COPASST ===================== -->
 <section id="copasst">
   <div class="sec-head reveal">
-    <div class="sec-badge-row"><span class="sec-num">5</span><span class="sec-pill">Comité</span></div>
-    <h2>COPASST</h2>
-    <p>Comité Paritario de Seguridad y Salud en el Trabajo de la Rama Judicial.</p>
+    ...
   </div>
 
   <div class="quote-card reveal">
-    <h3>Comité Paritario de Seguridad y Salud en el Trabajo</h3>
-    <p>
-      Reemplaza este texto con la información real del COPASST: su función dentro
-      del Sistema de Gestión de Seguridad y Salud en el Trabajo, quiénes lo integran
-      (representantes de la entidad y de los servidores judiciales), su periodo de
-      vigencia y sus principales responsabilidades de seguimiento y vigilancia.
-    </p>
+    ...
   </div>
 
   <div class="feature-grid stagger">
-    <div class="feature-card f-objetivo reveal">
-      <span class="feature-icon"><svg><use href="#ic-usercheck"></use></svg></span>
-      <div class="feature-title-row"><span class="feature-pulse"></span><h3 class="feature-title">Funciones</h3></div>
-      <p>Reemplazar con las funciones reales del comité: vigilancia de condiciones de trabajo, investigación de accidentes, seguimiento a programas de prevención, etc.</p>
+    <div class="feature-card f-objetivo reveal">...</div>   <!-- Objetivo -->
+    <div class="feature-card f-alcance reveal">...</div>    <!-- Alcance -->
+  </div>
+
+  <!-- ===== Video (misma tarjeta/ventana que el Power BI, ancho completo) ===== -->
+  <div class="bi-section-wrap reveal" style="margin-top:28px;">
+    <div class="bi-head">
+      <div>
+        <h3>Video institucional COPASST</h3>
+      </div>
     </div>
-    <div class="feature-card f-alcance reveal">
-      <span class="feature-icon"><svg><use href="#ic-users"></use></svg></span>
-      <div class="feature-title-row"><span class="feature-pulse"></span><h3 class="feature-title">Conformación</h3></div>
-      <p>Reemplazar con la conformación real: número de representantes por la entidad, número de representantes de los servidores judiciales, y período de elección/vigencia.</p>
+    <div class="bi-frame-wrap">
+      <div class="bi-toolbar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="url">video-copasst.mp4</span>
+        <span class="spacer"></span>
+        <button type="button" class="bi-fullscreen-btn" onclick="document.getElementById('videoCopasst').requestFullscreen && document.getElementById('videoCopasst').requestFullscreen()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"></path><path d="M21 8V5a2 2 0 0 0-2-2h-3"></path><path d="M3 16v3a2 2 0 0 0 2 2h3"></path><path d="M16 21h3a2 2 0 0 0 2-2v-3"></path></svg>
+          Pantalla completa
+        </button>
+      </div>
+      <div class="bi-embed">
+        <video id="videoCopasst" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <source src="RUTA_O_URL_DE_TU_VIDEO.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
   </div>
 </section>
