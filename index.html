@@ -80,6 +80,7 @@
     position:sticky;
     top:0;
     z-index:50;
+    height:112px;
     background:var(--navy-800);
     transition:background .35s ease, box-shadow .35s ease;
   }
@@ -92,7 +93,8 @@
   .header-inner{
     max-width:1360px;
     margin:0 auto;
-    padding:12px 32px;
+    height:100%;
+    padding:0px 32px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -100,10 +102,14 @@
     transition:padding .35s ease;
   }
   header.is-scrolled .header-inner{padding:10px 32px;}
-  .brand{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+  .brand{position:relative;display:flex;align-items:center;gap:10px;flex:0 0 auto;padding-left:170px;}
 .brand-logo{
-    width:56px;
-    height:56px;
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);  
+    width:200px;
+    height:200x;
     object-fit:contain;
     flex-shrink:0;
 }
