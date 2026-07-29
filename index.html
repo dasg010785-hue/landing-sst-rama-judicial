@@ -139,7 +139,14 @@ nav.tabs{
     position:absolute;
     top:0; height:100%;
     left:0; width:0;
-    background:var(--teal);
+    background:linear-gradient(
+      90deg,
+      #359956 0%,
+      #42b865 100%
+    );
+
+    box-shadow: 0 4px 12px rgba(53,153,86,.35);
+    
     border-radius:8px;
     z-index:0;
     transition:left .4s cubic-bezier(.34,1.2,.64,1), width .4s cubic-bezier(.34,1.2,.64,1), opacity .2s ease;
