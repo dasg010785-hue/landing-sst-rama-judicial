@@ -404,7 +404,41 @@ nav.tabs{
     border-radius:999px;
     padding:5px 14px;
   }
-  .sec-head h2{font-size:clamp(24px,3vw,32px);}
+  .sec-head h2{
+    font-size:clamp(28px,3vw,36px);
+    position:relative;
+    display:inline-block;
+    padding-bottom:14px;
+}
+
+.sec-head h2::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:80px;
+    height:4px;
+    background:linear-gradient(
+        90deg,
+        #359956,
+        #42b865
+    );
+    border-radius:999px;
+
+    animation:linePulse 3s ease-in-out infinite;
+}
+
+@keyframes linePulse{
+    0%,100%{
+        width:80px;
+        opacity:.8;
+    }
+    50%{
+        width:120px;
+        opacity:1;
+    }
+}
   .sec-head p{
     margin-top:14px;
     font-size:15px;
