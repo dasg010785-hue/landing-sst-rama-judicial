@@ -433,16 +433,46 @@ nav.tabs{
     left:50%;
     bottom:0;
     transform:translateX(-50%);
+
     width:80px;
     height:4px;
+
     background:linear-gradient(
         90deg,
         #359956,
         #42b865
     );
+
     border-radius:999px;
 
+    box-shadow:
+        0 0 8px rgba(53,153,86,.30),
+        0 0 16px rgba(53,153,86,.15);
+
     animation:linePulse 3s ease-in-out infinite;
+}
+
+@keyframes linePulse{
+
+    0%,100%{
+        width:80px;
+        opacity:.8;
+
+        box-shadow:
+            0 0 8px rgba(53,153,86,.30),
+            0 0 16px rgba(53,153,86,.15);
+    }
+
+    50%{
+        width:120px;
+        opacity:1;
+
+        box-shadow:
+            0 0 14px rgba(53,153,86,.55),
+            0 0 28px rgba(53,153,86,.30),
+            0 0 40px rgba(53,153,86,.20);
+    }
+
 }
 
 @keyframes linePulse{
