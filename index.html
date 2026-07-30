@@ -406,9 +406,19 @@ nav.tabs{
   }
   .sec-head h2{
     font-size:clamp(28px,3vw,36px);
+    font-weight:800;
     position:relative;
     display:inline-block;
     padding-bottom:14px;
+
+    background:linear-gradient(
+        90deg,
+        #122236,
+        #359956
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .sec-head h2::after{
