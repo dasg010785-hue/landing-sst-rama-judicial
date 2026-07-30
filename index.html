@@ -80,10 +80,21 @@
     position:sticky;
     top:0;
     z-index:50;
+
     height:112px;
-    background:var(--navy-800);
-    transition:background .35s ease, box-shadow .35s ease;
-  }
+
+    background:rgba(18,34,54,.88);
+
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:
+        background .35s ease,
+        box-shadow .35s ease,
+        backdrop-filter .35s ease;
+}
   header.is-scrolled{
     background:rgba(18,34,54,.86);
     backdrop-filter:blur(12px);
