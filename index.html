@@ -656,20 +656,68 @@ nav.tabs{
   .feature-card p{font-size:14.5px;line-height:1.7;color:#3d372f;margin:0;}
 
 .generalidades-banner{
+    position:relative;
+
     margin-top:0;
+
     width:100%;
     max-width:1110px;
+
     margin-left:auto;
     margin-right:auto;
+
     border-radius:16px;
+
     overflow:hidden;
-    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+    box-shadow:
+        0 0 0 1px rgba(53,153,86,.15),
+        0 0 25px rgba(53,153,86,.12),
+        0 20px 40px rgba(0,0,0,.12);
 }
 
 .generalidades-banner img{
     display:block;
     width:100%;
     height:auto;
+
+    transition:
+        transform .8s ease,
+        filter .8s ease;
+}
+
+.generalidades-banner:hover img{
+    transform:scale(1.03);
+    filter:brightness(1.03);
+}
+
+.generalidades-banner::after{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:40%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transform:skewX(-20deg);
+
+    transition:left 1s ease;
+
+    pointer-events:none;
+}
+
+.generalidades-banner:hover::after{
+    left:140%;
 }
 
 .equipo-title{
