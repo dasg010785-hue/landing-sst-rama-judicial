@@ -30,7 +30,7 @@
     margin:0;
     background:
       linear-gradient(rgba(247,244,241,.50), rgba(247,244,241,.50)),
-      linear-gradient(135deg, #821212 0%, #6d4b30 25%,#359956 50%,#2a6f7a 75%,#1e3a6b 100%);
+      linear-gradient(90deg, #821212 0%, #1e3a6b 100%);
     background-attachment:fixed;
     color:var(--ink);
     font-family:'Inter',sans-serif;
@@ -80,49 +80,16 @@
     position:sticky;
     top:0;
     z-index:50;
-
     height:112px;
-
-    background:rgba(18,34,54,.88);
-
-    backdrop-filter:blur(16px);
-    -webkit-backdrop-filter:blur(16px);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-    transition:
-        background .35s ease,
-        box-shadow .35s ease,
-        backdrop-filter .35s ease;
-}
-header::after{
-    content:"";
-    position:absolute;
-
-    left:0;
-    bottom:0;
-
-    width:100%;
-    height:2px;
-
-    background:linear-gradient(
-        90deg,
-        #821212,
-        #359956,
-        #1e3a6b
-    );
-
-    opacity:.85;
-}
+    background:var(--navy-800);
+    transition:background .35s ease, box-shadow .35s ease;
+  }
   header.is-scrolled{
-    background:rgba(18,34,54,.92);
-
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.25);
-}
+    background:rgba(18,34,54,.86);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    box-shadow:0 6px 24px rgba(0,0,0,.18);
+  }
   .header-inner{
     max-width:1360px;
     margin:0 auto;
@@ -340,12 +307,7 @@ nav.tabs{
     line-height:1.06;
     color:#fff;
     max-width:16ch;
-
-    text-shadow:
-        0 4px 12px rgba(0,0,0,.20),
-        0 8px 24px rgba(0,0,0,.25),
-        0 12px 40px rgba(0,0,0,.15);
-}
+  }
   .hero-sub{
     max-width:52ch;
     margin-top:20px;
@@ -442,82 +404,7 @@ nav.tabs{
     border-radius:999px;
     padding:5px 14px;
   }
-  .sec-head h2{
-    font-size:clamp(28px,3vw,36px);
-    font-weight:800;
-    position:relative;
-    display:inline-block;
-    padding-bottom:14px;
-    white-space:nowrap;
-
-    background:linear-gradient(
-        90deg,
-        #122236,
-        #359956
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.sec-head h2::after{
-    content:"";
-    position:absolute;
-    left:50%;
-    bottom:0;
-    transform:translateX(-50%);
-
-    width:80px;
-    height:4px;
-
-    background:linear-gradient(
-        90deg,
-        #359956,
-        #42b865
-    );
-
-    border-radius:999px;
-
-    box-shadow:
-        0 0 8px rgba(53,153,86,.30),
-        0 0 16px rgba(53,153,86,.15);
-
-    animation:linePulse 3s ease-in-out infinite;
-}
-
-@keyframes linePulse{
-
-    0%,100%{
-        width:80px;
-        opacity:.8;
-
-        box-shadow:
-            0 0 8px rgba(53,153,86,.30),
-            0 0 16px rgba(53,153,86,.15);
-    }
-
-    50%{
-        width:120px;
-        opacity:1;
-
-        box-shadow:
-            0 0 14px rgba(53,153,86,.55),
-            0 0 28px rgba(53,153,86,.30),
-            0 0 40px rgba(53,153,86,.20);
-    }
-
-}
-
-@keyframes linePulse{
-    0%,100%{
-        width:80px;
-        opacity:.8;
-    }
-    50%{
-        width:120px;
-        opacity:1;
-    }
-}
+  .sec-head h2{font-size:clamp(24px,3vw,32px);}
   .sec-head p{
     margin-top:14px;
     font-size:15px;
@@ -577,42 +464,13 @@ nav.tabs{
 
   .feature-card{
     position:relative;
-
-    background:rgba(255,255,255,.85);
-
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-
-    border:1px solid rgba(255,255,255,.45);
-
+    background:var(--white);
+    border:1px solid var(--line);
     border-radius:18px;
-
     padding:32px 30px 30px;
-
     overflow:hidden;
-
-    box-shadow:
-        0 8px 24px rgba(0,0,0,.08),
-        inset 0 1px 0 rgba(255,255,255,.50);
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
-}
-
-.feature-card:hover{
-    transform:translateY(-8px);
-
-    border-color:#359956;
-
-    box-shadow:
-        0 0 0 1px rgba(53,153,86,.25),
-        0 0 20px rgba(53,153,86,.12),
-        0 20px 50px rgba(0,0,0,.15),
-        inset 0 1px 0 rgba(255,255,255,.60);
-}
-
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
   .feature-card::before{
     content:"";
     position:absolute; top:0; left:0; right:0; height:5px;
@@ -656,68 +514,20 @@ nav.tabs{
   .feature-card p{font-size:14.5px;line-height:1.7;color:#3d372f;margin:0;}
 
 .generalidades-banner{
-    position:relative;
-
     margin-top:0;
-
     width:100%;
     max-width:1110px;
-
     margin-left:auto;
     margin-right:auto;
-
     border-radius:16px;
-
     overflow:hidden;
-
-    box-shadow:
-        0 0 0 1px rgba(53,153,86,.15),
-        0 0 25px rgba(53,153,86,.12),
-        0 20px 40px rgba(0,0,0,.12);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
 }
 
 .generalidades-banner img{
     display:block;
     width:100%;
     height:auto;
-
-    transition:
-        transform .8s ease,
-        filter .8s ease;
-}
-
-.generalidades-banner:hover img{
-    transform:scale(1.03);
-    filter:brightness(1.03);
-}
-
-.generalidades-banner::after{
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:-120%;
-
-    width:40%;
-    height:100%;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.35),
-        transparent
-    );
-
-    transform:skewX(-20deg);
-
-    transition:left 1s ease;
-
-    pointer-events:none;
-}
-
-.generalidades-banner:hover::after{
-    left:140%;
 }
 
 .equipo-title{
@@ -1319,7 +1129,7 @@ nav.tabs{
     <!-- Imagen institucional -->
   <div class="generalidades-banner reveal">
     <img
-      src="assets/logos/nuestro-equipo-v2.png"
+      src="assets/logos/nuestro-equipo.png"
       alt="Equipo Nacional de Seguridad y Salud en el Trabajo">
   </div>
 
