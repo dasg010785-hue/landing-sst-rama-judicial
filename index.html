@@ -457,6 +457,74 @@ nav.tabs{
     color:#ffffff;
     font-weight:700;
   }
+/*==================================================
+  COPASST - BOTÓN VER ACUERDO
+==================================================*/
+
+.copasst-header{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:32px;
+    z-index:2;
+}
+
+.copasst-header > div{
+    flex:1;
+}
+
+.copasst-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+
+    padding:12px 24px;
+
+    background:linear-gradient(
+        90deg,
+        #359956 0%,
+        #42b865 100%
+    );
+
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+
+    border-radius:10px;
+
+    box-shadow:0 8px 18px rgba(53,153,86,.25);
+
+    transition:all .25s ease;
+}
+
+.copasst-btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 24px rgba(53,153,86,.35);
+
+    background:linear-gradient(
+        90deg,
+        #2d874b 0%,
+        #359956 100%
+    );
+}
+
+@media (max-width:768px){
+
+    .copasst-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .copasst-btn{
+        width:100%;
+    }
+
+}
 
   /* ===== Tarjetas destacadas: Objetivo / Alcance ===== */
   .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
@@ -1513,12 +1581,32 @@ nav.tabs{
   </div>
 
   <div class="quote-card reveal">
-    <h3>Comité Paritario de Seguridad y Salud en el Trabajo</h3>
-    <p>
-  El <strong>Comité Paritario de Seguridad y Salud en el Trabajo (COPASST)</strong>
-  es el organismo de participación, consulta y apoyo en materia de Seguridad y Salud en el Trabajo (SST), encargado de promover la cooperación entre la administración y los servidores judiciales para fortalecer la prevención de accidentes de trabajo y enfermedades laborales, fomentar una cultura de autocuidado y contribuir al mejoramiento continuo del Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST) en la Rama Judicial.
-    </p>
+    <div class="copasst-header">
+
+        <div>
+
+            <h3>Comité Paritario de Seguridad y Salud en el Trabajo</h3>
+
+            <p>
+                El <strong>Comité Paritario de Seguridad y Salud en el Trabajo (COPASST)</strong>
+                es el organismo de participación, consulta y apoyo en materia de Seguridad y Salud en el Trabajo (SST), encargado de promover la cooperación entre la administración y los servidores judiciales para fortalecer la prevención de accidentes de trabajo y enfermedades laborales, fomentar una cultura de autocuidado y contribuir al mejoramiento continuo del Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST) en la Rama Judicial.
+            </p>
+
+        </div>
+
+    <a
+    href="https://actosadministrativos.ramajudicial.gov.co/Home/DetalleActoAdministrativo/18892"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="copasst-btn">
+
+    📑 Consultar Acuerdo PCSJA24-12243
+
+  </a>
+
   </div>
+
+</div>
 
   <div class="feature-grid stagger">
     <div class="feature-card f-objetivo reveal">
