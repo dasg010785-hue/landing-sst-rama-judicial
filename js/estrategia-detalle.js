@@ -1,33 +1,290 @@
-﻿const details={
-psicosocial:{accent:'#8E44AD',headerGradient:'linear-gradient(105deg,#3C225A,#755094)',pageBackground:'radial-gradient(circle at 85% 8%,rgba(142,68,173,.15),transparent 30%),linear-gradient(135deg,#F6F1F8,#EDE3F2)',title:'Estrategia de Riesgo Psicosocial',image:'assets/estrategias/psicosocial.png',summary:'Identifica, evalúa e interviene los factores de riesgo psicosocial que afectan a los servidores judiciales; promueve el bienestar emocional, la resiliencia y el equilibrio entre la vida laboral y personal.',actions:['Cultura organizacional basada en la confianza, la honestidad, la justicia y el reconocimiento','Apoyo y protección psicológica','Balance vida laboral, familiar y personal','Compromiso con el trabajo de calidad y oportunidad','Desarrollo de habilidades para el manejo de emociones y el fortalecimiento de la resiliencia','Educación para el manejo de síntomas de afectación emocional','Fomento de hábitos individuales protectores de la salud','Fomento de redes de apoyo social','Gestión de los factores de riesgo psicosocial en el trabajo','Líderes gestores de apoyo para los servidores judiciales','Respeto en las relaciones','Servicios de consejería para el desarrollo de fortalezas individuales'],indicators:[['Cobertura de evaluación','Porcentaje de población objetivo evaluada para identificar factores de riesgo psicosocial.'],['Participación en intervenciones','Porcentaje de personas convocadas que participan en actividades de promoción y prevención.'],['Gestión de casos y remisiones','Proporción de casos identificados que cuentan con orientación, seguimiento o remisión según el protocolo aplicable.']]},
-ergonomia:{accent:'#C99A3F',headerGradient:'linear-gradient(105deg,#7C5416,#B6812B)',pageBackground:'radial-gradient(circle at 85% 8%,rgba(201,154,63,.18),transparent 30%),linear-gradient(135deg,#FBF7ED,#F4ECD9)',title:'Estrategia de Ergonomía',image:'assets/estrategias/musculoesqueletico.png',summary:'Previene los desórdenes musculoesqueléticos mediante la identificación e intervención de condiciones ergonómicas en los puestos de trabajo y la promoción de hábitos de autocuidado.',actions:['PVE para la Prevención de Desórdenes Musculoesqueléticos (DME) — Programa de Ergonomía','Promoción y prevención de la salud musculoesquelética — PENDULUM','Prevención de lesiones deportivas','Teletrabajo','Encuentro de Municipios','Semana de la Salud'],indicators:[['Cobertura de evaluación ergonómica','Porcentaje de puestos o personas priorizadas con evaluación ergonómica realizada.'],['Implementación de recomendaciones','Porcentaje de recomendaciones ergonómicas atendidas dentro del periodo definido.'],['Participación en actividades preventivas','Porcentaje de personas convocadas que participan en pausas activas, capacitaciones u otras actividades.']]},
-medicina:{accent:'#2F73B8',headerGradient:'linear-gradient(105deg,#173B66,#2E6595)',pageBackground:'radial-gradient(circle at 85% 8%,rgba(47,115,184,.16),transparent 30%),linear-gradient(135deg,#F1F6FB,#E2EEF8)',title:'Estrategia de Medicina Preventiva y del Trabajo',image:'assets/estrategias/Medicina.png',summary:'Desarrolla actividades de promoción de la salud y prevención de la enfermedad, favoreciendo la detección oportuna de condiciones asociadas al trabajo y los hábitos de vida saludable.',actions:['Medicina del estilo de vida','Hábitos saludables para la gestación','Cuidado visual','Programa de prevención de enfermedades transmisibles','Programa de prevención de enfermedades crónicas no transmisibles','Proyectos de inversión: promoción del desarrollo humano y la cultura en SST','Examen médico ocupacional','Prevención de lesiones deportivas','Programa de promoción y prevención en conservación auditiva y cuidado de la voz'],indicators:[['Cobertura de exámenes ocupacionales','Porcentaje de población priorizada con examen médico ocupacional realizado.'],['Participación en programas de promoción','Porcentaje de personas convocadas que participan en acciones de prevención y promoción de la salud.'],['Seguimiento a recomendaciones médicas','Porcentaje de recomendaciones ocupacionales gestionadas conforme al procedimiento institucional.']]},
-higiene:{accent:'#28405F',headerGradient:'linear-gradient(105deg,#1F426D,#682A42)',pageBackground:'radial-gradient(circle at 85% 8%,rgba(111,24,30,.12),transparent 29%),radial-gradient(circle at 10% 85%,rgba(40,64,95,.14),transparent 32%),linear-gradient(135deg,#F3F6FA,#F2E8EA)',title:'Estrategia de Higiene y Seguridad en el Trabajo',image:'assets/estrategias/higiene.png',summary:'Gestiona los riesgos presentes en las sedes judiciales mediante inspecciones, controles y acciones de prevención para fortalecer ambientes de trabajo seguros.',actions:['Identificación de peligros','Administración y gestión de la emergencia','Trabajos de alto riesgo (TAR)','COPASST','Promoción y prevención de accidentes de trabajo','Riesgo público','Seguridad vial'],indicators:[['Cobertura de inspecciones','Porcentaje de sedes, áreas o procesos priorizados con inspección de seguridad realizada.'],['Cierre de hallazgos','Porcentaje de hallazgos de inspección con acciones correctivas cerradas o gestionadas.'],['Participación en preparación ante emergencias','Porcentaje de personas convocadas que participan en actividades de preparación y respuesta.']]}
+﻿const details = {
+  psicosocial: {
+    accent: "#8E44AD",
+    headerGradient: "linear-gradient(105deg,#3C225A,#755094)",
+    pageBackground:
+      "radial-gradient(circle at 85% 8%,rgba(142,68,173,.15),transparent 30%),linear-gradient(135deg,#F6F1F8,#EDE3F2)",
+    title: "Estrategia de Riesgo Psicosocial",
+    image: "assets/estrategias/psicosocial.png",
+    summary:
+      "Identifica, evalúa e interviene los factores de riesgo psicosocial que afectan a los servidores judiciales; promueve el bienestar emocional, la resiliencia y el equilibrio entre la vida laboral y personal.",
+    actions: [
+      "Cultura organizacional basada en la confianza, la honestidad, la justicia y el reconocimiento",
+      "Apoyo y protección psicológica",
+      "Balance vida laboral, familiar y personal",
+      "Compromiso con el trabajo de calidad y oportunidad",
+      "Desarrollo de habilidades para el manejo de emociones y el fortalecimiento de la resiliencia",
+      "Educación para el manejo de síntomas de afectación emocional",
+      "Fomento de hábitos individuales protectores de la salud",
+      "Fomento de redes de apoyo social",
+      "Gestión de los factores de riesgo psicosocial en el trabajo",
+      "Líderes gestores de apoyo para los servidores judiciales",
+      "Respeto en las relaciones",
+      "Servicios de consejería para el desarrollo de fortalezas individuales",
+    ],
+    indicators: [
+      [
+        "Cobertura de evaluación",
+        "Porcentaje de población objetivo evaluada para identificar factores de riesgo psicosocial.",
+      ],
+      [
+        "Participación en intervenciones",
+        "Porcentaje de personas convocadas que participan en actividades de promoción y prevención.",
+      ],
+      [
+        "Gestión de casos y remisiones",
+        "Proporción de casos identificados que cuentan con orientación, seguimiento o remisión según el protocolo aplicable.",
+      ],
+    ],
+  },
+  ergonomia: {
+    accent: "#C99A3F",
+    headerGradient: "linear-gradient(105deg,#7C5416,#B6812B)",
+    pageBackground:
+      "radial-gradient(circle at 85% 8%,rgba(201,154,63,.18),transparent 30%),linear-gradient(135deg,#FBF7ED,#F4ECD9)",
+    title: "Estrategia de Ergonomía",
+    image: "assets/estrategias/musculoesqueletico.png",
+    summary:
+      "Previene los desórdenes musculoesqueléticos mediante la identificación e intervención de condiciones ergonómicas en los puestos de trabajo y la promoción de hábitos de autocuidado.",
+    actions: [
+      "PVE para la Prevención de Desórdenes Musculoesqueléticos (DME) — Programa de Ergonomía",
+      "Promoción y prevención de la salud musculoesquelética — PENDULUM",
+      "Prevención de lesiones deportivas",
+      "Teletrabajo",
+      "Encuentro de Municipios",
+      "Semana de la Salud",
+    ],
+    indicators: [
+      [
+        "Cobertura de evaluación ergonómica",
+        "Porcentaje de puestos o personas priorizadas con evaluación ergonómica realizada.",
+      ],
+      [
+        "Implementación de recomendaciones",
+        "Porcentaje de recomendaciones ergonómicas atendidas dentro del periodo definido.",
+      ],
+      [
+        "Participación en actividades preventivas",
+        "Porcentaje de personas convocadas que participan en pausas activas, capacitaciones u otras actividades.",
+      ],
+    ],
+  },
+  medicina: {
+    accent: "#2F73B8",
+    headerGradient: "linear-gradient(105deg,#173B66,#2E6595)",
+    pageBackground:
+      "radial-gradient(circle at 85% 8%,rgba(47,115,184,.16),transparent 30%),linear-gradient(135deg,#F1F6FB,#E2EEF8)",
+    title: "Estrategia de Medicina Preventiva y del Trabajo",
+    image: "assets/estrategias/Medicina.png",
+    summary:
+      "Desarrolla actividades de promoción de la salud y prevención de la enfermedad, favoreciendo la detección oportuna de condiciones asociadas al trabajo y los hábitos de vida saludable.",
+    actions: [
+      "Medicina del estilo de vida",
+      "Hábitos saludables para la gestación",
+      "Cuidado visual",
+      "Programa de prevención de enfermedades transmisibles",
+      "Programa de prevención de enfermedades crónicas no transmisibles",
+      "Proyectos de inversión: promoción del desarrollo humano y la cultura en SST",
+      "Examen médico ocupacional",
+      "Prevención de lesiones deportivas",
+      "Programa de promoción y prevención en conservación auditiva y cuidado de la voz",
+    ],
+    indicators: [
+      [
+        "Cobertura de exámenes ocupacionales",
+        "Porcentaje de población priorizada con examen médico ocupacional realizado.",
+      ],
+      [
+        "Participación en programas de promoción",
+        "Porcentaje de personas convocadas que participan en acciones de prevención y promoción de la salud.",
+      ],
+      [
+        "Seguimiento a recomendaciones médicas",
+        "Porcentaje de recomendaciones ocupacionales gestionadas conforme al procedimiento institucional.",
+      ],
+    ],
+  },
+  higiene: {
+    accent: "#28405F",
+    headerGradient: "linear-gradient(105deg,#1F426D,#682A42)",
+    pageBackground:
+      "radial-gradient(circle at 85% 8%,rgba(111,24,30,.12),transparent 29%),radial-gradient(circle at 10% 85%,rgba(40,64,95,.14),transparent 32%),linear-gradient(135deg,#F3F6FA,#F2E8EA)",
+    title: "Estrategia de Higiene y Seguridad en el Trabajo",
+    image: "assets/estrategias/higiene.png",
+    summary:
+      "Gestiona los riesgos presentes en las sedes judiciales mediante inspecciones, controles y acciones de prevención para fortalecer ambientes de trabajo seguros.",
+    actions: [
+      "Identificación de peligros",
+      "Administración y gestión de la emergencia",
+      "Trabajos de alto riesgo (TAR)",
+      "COPASST",
+      "Promoción y prevención de accidentes de trabajo",
+      "Riesgo público",
+      "Seguridad vial",
+    ],
+    indicators: [
+      [
+        "Cobertura de inspecciones",
+        "Porcentaje de sedes, áreas o procesos priorizados con inspección de seguridad realizada.",
+      ],
+      [
+        "Cierre de hallazgos",
+        "Porcentaje de hallazgos de inspección con acciones correctivas cerradas o gestionadas.",
+      ],
+      [
+        "Participación en preparación ante emergencias",
+        "Porcentaje de personas convocadas que participan en actividades de preparación y respuesta.",
+      ],
+    ],
+  },
 };
-const current=details[document.body.dataset.strategy];
-document.title=current.title+' | Plan de Trabajo SST';
-document.documentElement.style.setProperty('--accent',current.accent);
-document.documentElement.style.setProperty('--header-gradient',current.headerGradient);document.documentElement.style.setProperty('--page-background',current.pageBackground);
-document.querySelector('[data-title]').textContent=current.title;
-document.querySelector('[data-summary]').textContent=current.summary;
-const menuNav='<a href="#introduccion">Introducción</a><a href="#objetivo">Objetivo de la estrategia</a><a href="#lineas-accion">Líneas de acción</a><a href="#actividades">Actividades</a>';
-document.querySelector('.tabs').innerHTML='<span class="nav-indicator" id="navIndicator"></span>'+menuNav;
-document.querySelector('.mobile-menu-links').innerHTML=menuNav;
-const hero=document.querySelector('.hero');
-hero.insertAdjacentHTML('afterbegin','<video class="hero-video" autoplay muted loop playsinline preload="auto"><source src="https://cdn.dribbble.com/userupload/46353399/file/5657af743257c466354ddac1b85c3386.mp4" type="video/mp4"></video>');
-const heroVideo=document.querySelector('.hero-video');
-if(heroVideo){const playVideo=()=>heroVideo.play().catch(()=>{});playVideo();heroVideo.addEventListener('ended',playVideo);heroVideo.addEventListener('pause',playVideo);document.addEventListener('visibilitychange',()=>{if(!document.hidden)playVideo()});}
-const intro=document.querySelector('.intro');intro.id='introduccion';
-const objective=document.createElement('section');objective.className='objective-section reveal';objective.id='objetivo';objective.innerHTML='<div class="section-tag">Propósito de la estrategia</div><h2 class="section-title">Objetivo de la estrategia</h2><article class="panel"><p class="intro-copy">Promover las condiciones psicosociales protectoras en la Rama Judicial, fortalecer los hábitos saludables e intervenir los factores de riesgo psicosocial intralaborales, con el propósito de fomentar el bienestar psicosocial, prevenir afectaciones en la salud y en el trabajo, contribuir a la excelencia institucional y favorecer el desarrollo humano de los servidores judiciales mediante intervenciones costo-efectivas.</p></article>';
-intro.insertAdjacentElement('afterend',objective);
-const lines=document.querySelector('.content-grid');lines.id='lineas-accion';
-const activities=document.createElement('section');activities.className='activities-section reveal';activities.id='actividades';activities.innerHTML='<div class="section-tag">Seguimiento</div><h2 class="section-title">Seguimiento</h2><article class="panel"><p class="note">El seguimiento de la estrategia se realiza mediante el monitoreo periódico de indicadores de cobertura, participación, gestión de casos, evaluación de los factores de riesgo psicosocial y fortalecimiento de factores protectores. Este proceso se complementa con reuniones de seguimiento, análisis de la información generada por el Programa de Vigilancia Epidemiológica de Riesgo Psicosocial y la aplicación del ciclo de mejora continua (Planear–Hacer–Verificar–Actuar), permitiendo implementar acciones de mejora y fortalecer permanentemente las intervenciones orientadas al bienestar integral de los servidores judiciales.</p></article>';
-lines.insertAdjacentElement('afterend',activities);
-const navLinks=document.querySelectorAll('.tabs a');const navSections=Array.from(navLinks).map(link=>document.querySelector(link.getAttribute('href')));const indicator=document.getElementById('navIndicator');const moveIndicator=()=>{const active=document.querySelector('.tabs a.active');if(!active||!indicator)return;indicator.style.left=active.offsetLeft+'px';indicator.style.width=active.offsetWidth+'px';indicator.style.opacity='1'};const updateActiveNav=()=>{let activeIndex=0;navSections.forEach((section,index)=>{if(section&&section.getBoundingClientRect().top-95<=0)activeIndex=index});navLinks.forEach((link,index)=>link.classList.toggle('active',index===activeIndex));moveIndicator()};document.addEventListener('scroll',updateActiveNav,{passive:true});window.addEventListener('resize',moveIndicator);updateActiveNav();
-const image=document.querySelector('[data-image]');image.src=current.image;image.alt=current.title;
-const actions=document.querySelector('[data-actions]');current.actions.forEach(action=>{const item=document.createElement('li');item.textContent=action;actions.append(item)});
-const grid=document.querySelector('[data-indicators]');current.indicators.forEach(([title,description])=>{const item=document.createElement('article');item.className='indicator';item.innerHTML='<div class="label">Indicador propuesto</div><h4></h4><p></p>';item.querySelector('h4').textContent=title;item.querySelector('p').textContent=description;grid.append(item)});
-const menu=document.getElementById('mobileMenu'),toggle=document.getElementById('menuToggle'),close=document.getElementById('menuClose');const setMenu=open=>{menu.classList.toggle('open',open);menu.setAttribute('aria-hidden',!open);toggle.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':''};toggle.addEventListener('click',()=>setMenu(true));close.addEventListener('click',()=>setMenu(false));document.getElementById('menuBackdrop').addEventListener('click',()=>setMenu(false));
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const elements=document.querySelectorAll('.reveal');if(reduce||!('IntersectionObserver' in window)){elements.forEach(element=>element.classList.add('is-visible'))}else{const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.12});elements.forEach(element=>observer.observe(element))}
-if(!reduce&&matchMedia('(pointer:fine)').matches){document.querySelectorAll('.panel,.indicator').forEach(card=>{card.addEventListener('pointermove',event=>{const rect=card.getBoundingClientRect();card.style.setProperty('--mx',((event.clientX-rect.left)/rect.width)*100+'%');card.style.setProperty('--my',((event.clientY-rect.top)/rect.height)*100+'%')});card.addEventListener('pointerleave',()=>{card.style.removeProperty('--mx');card.style.removeProperty('--my')})})}
+const current = details[document.body.dataset.strategy];
+document.title = current.title + " | Plan de Trabajo SST";
+document.documentElement.style.setProperty("--accent", current.accent);
+document.documentElement.style.setProperty(
+  "--header-gradient",
+  current.headerGradient,
+);
+document.documentElement.style.setProperty(
+  "--page-background",
+  current.pageBackground,
+);
+document.querySelector("[data-title]").textContent = current.title;
+document.querySelector("[data-summary]").textContent = current.summary;
+const menuNav =
+  '<a href="#introduccion">Introducción</a><a href="#objetivo">Objetivo de la estrategia</a><a href="#lineas-accion">Líneas de acción</a><a href="#actividades">Actividades</a>';
+document.querySelector(".tabs").innerHTML =
+  '<span class="nav-indicator" id="navIndicator"></span>' + menuNav;
+document.querySelector(".mobile-menu-links").innerHTML = menuNav;
+const hero = document.querySelector(".hero");
+hero.insertAdjacentHTML(
+  "afterbegin",
+  '<video class="hero-video" autoplay muted loop playsinline preload="auto"><source src="https://cdn.dribbble.com/userupload/46353399/file/5657af743257c466354ddac1b85c3386.mp4" type="video/mp4"></video>',
+);
+const heroVideo = document.querySelector(".hero-video");
+if (heroVideo) {
+  const playVideo = () => heroVideo.play().catch(() => {});
+  playVideo();
+  heroVideo.addEventListener("ended", playVideo);
+  heroVideo.addEventListener("pause", playVideo);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) playVideo();
+  });
+}
+const intro = document.querySelector(".intro");
+intro.id = "introduccion";
+const objective = document.createElement("section");
+objective.className = "objective-section reveal";
+objective.id = "objetivo";
+objective.innerHTML =
+  '<div class="section-tag">Propósito de la estrategia</div><h2 class="section-title">Objetivo de la estrategia</h2><article class="panel"><p class="intro-copy">Promover las condiciones psicosociales protectoras en la Rama Judicial, fortalecer los hábitos saludables e intervenir los factores de riesgo psicosocial intralaborales, con el propósito de fomentar el bienestar psicosocial, prevenir afectaciones en la salud y en el trabajo, contribuir a la excelencia institucional y favorecer el desarrollo humano de los servidores judiciales mediante intervenciones costo-efectivas.</p></article>';
+intro.insertAdjacentElement("afterend", objective);
+const lines = document.querySelector(".content-grid");
+lines.id = "lineas-accion";
+const activities = document.createElement("section");
+activities.className = "activities-section reveal";
+activities.id = "actividades";
+activities.className = "panel reveal panel-image";
 
+activities.innerHTML = `
+  <img
+    src="assets/estrategias/psicosocial-seguimiento.png"
+    alt="Seguimiento Estrategia Psicosocial"
+    class="strategy-panel-image">
+`;
+lines.insertAdjacentElement("afterend", activities);
+const navLinks = document.querySelectorAll(".tabs a");
+const navSections = Array.from(navLinks).map((link) =>
+  document.querySelector(link.getAttribute("href")),
+);
+const indicator = document.getElementById("navIndicator");
+const moveIndicator = () => {
+  const active = document.querySelector(".tabs a.active");
+  if (!active || !indicator) return;
+  indicator.style.left = active.offsetLeft + "px";
+  indicator.style.width = active.offsetWidth + "px";
+  indicator.style.opacity = "1";
+};
+const updateActiveNav = () => {
+  let activeIndex = 0;
+  navSections.forEach((section, index) => {
+    if (section && section.getBoundingClientRect().top - 95 <= 0)
+      activeIndex = index;
+  });
+  navLinks.forEach((link, index) =>
+    link.classList.toggle("active", index === activeIndex),
+  );
+  moveIndicator();
+};
+document.addEventListener("scroll", updateActiveNav, { passive: true });
+window.addEventListener("resize", moveIndicator);
+updateActiveNav();
+const image = document.querySelector("[data-image]");
+image.src = current.image;
+image.alt = current.title;
+const actions = document.querySelector("[data-actions]");
+current.actions.forEach((action) => {
+  const item = document.createElement("li");
+  item.textContent = action;
+  actions.append(item);
+});
+const grid = document.querySelector("[data-indicators]");
+current.indicators.forEach(([title, description]) => {
+  const item = document.createElement("article");
+  item.className = "indicator";
+  item.innerHTML =
+    '<div class="label">Indicador propuesto</div><h4></h4><p></p>';
+  item.querySelector("h4").textContent = title;
+  item.querySelector("p").textContent = description;
+  grid.append(item);
+});
+const menu = document.getElementById("mobileMenu"),
+  toggle = document.getElementById("menuToggle"),
+  close = document.getElementById("menuClose");
+const setMenu = (open) => {
+  menu.classList.toggle("open", open);
+  menu.setAttribute("aria-hidden", !open);
+  toggle.setAttribute("aria-expanded", open);
+  document.body.style.overflow = open ? "hidden" : "";
+};
+toggle.addEventListener("click", () => setMenu(true));
+close.addEventListener("click", () => setMenu(false));
+document
+  .getElementById("menuBackdrop")
+  .addEventListener("click", () => setMenu(false));
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const elements = document.querySelectorAll(".reveal");
+if (reduce || !("IntersectionObserver" in window)) {
+  elements.forEach((element) => element.classList.add("is-visible"));
+} else {
+  const observer = new IntersectionObserver(
+    (entries) =>
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      }),
+    { threshold: 0.12 },
+  );
+  elements.forEach((element) => observer.observe(element));
+}
+if (!reduce && matchMedia("(pointer:fine)").matches) {
+  document.querySelectorAll(".panel,.indicator").forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty(
+        "--mx",
+        ((event.clientX - rect.left) / rect.width) * 100 + "%",
+      );
+      card.style.setProperty(
+        "--my",
+        ((event.clientY - rect.top) / rect.height) * 100 + "%",
+      );
+    });
+    card.addEventListener("pointerleave", () => {
+      card.style.removeProperty("--mx");
+      card.style.removeProperty("--my");
+    });
+  });
+}
